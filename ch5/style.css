@@ -1,0 +1,79 @@
+/* Gana SEHAKI 03/04/2025*/
+
+/* this will apply on the body section */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d7c7aa;
+    color: #926f4f;
+    font-size: 16px;
+    }
+/* style for the nav bar */
+nav{
+    height: 35px;
+}
+/* styles for links */
+a:link{
+    color: #8b1010;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    background-color: #000;
+    color: #fff;
+}
+a:visited{
+    color: #00602b;
+    background-color: #fff;
+}
+/* header section configurations */
+header{
+    margin-top: 10px; /*to have some space between navbar and header*/
+    background-color: #00602b; /*green for italian vibe*/
+    text-align: center; /*to center the text*/
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+}
+h2, h3{
+    color: #342517; /*h2 and h3 color*/
+}
+p{
+    color: #230e60;
+    background-color: #ffffff;
+}
+/* styles for the main element */
+main{
+    font-weight: bold;
+    background-image: url(photos/background.jpg);
+    background-repeat: repeat;
+}
+/* style for restaurant image */
+.our-restaurant{
+    height: 300px;
+    width: 440px;
+}
+/* styles for the specialities images */
+.our-specialities{
+    height: 210px;
+    width: 340px;
+    box-shadow: 1px 3px 15px; /*shadow for the images with a blur*/
+    margin: 18px 14px; /* margin for the image to be more visible*/
+}
+/*those are a class selectors*/
+.highlight{
+    font-weight: bold;
+    color: #ee1e28;
+    font-style: italic;
+}
+.special-item{
+    background-color: #ffffff;
+}
+/*this is an id selector*/
+#footer{
+    text-align: center;
+    color: white;
+    background-color: #bb161d;
+}
