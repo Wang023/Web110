@@ -1,0 +1,52 @@
+/* Gana SEHAKI 03/05/2025 */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+header p{
+    font-size: 45px;
+    font-style: italic;
+    font-weight: bold;
+    color: #8d3c3c;
+    margin-left: 15px;
+}
+.iam-gradient{
+    text-align: center;
+    background-image: linear-gradient( #d1a9c2c0, #b68299, #9a69d2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2,h3,h4,h5,h6{
+    margin-left: 20px;
+}
+main h2{
+    color: rgb(48, 58, 128);
+}
+h3{
+    color: rgb(34, 93, 93);
+}
+h4{
+    color: #693c50;
+}
+h5{
+    color: #8d3c3c;
+}
+h6{
+    color: rgb(65, 152, 49);
+}
+.player{
+    height: 480px;
+    width: 450px;
+    margin: 45px 25px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    box-shadow: 2px 1px 12px;
+}
+#footer{
+    margin-left: 15px;
+    text-decoration: underline;
+    text-shadow: 2px 1px 4px #3f3f3f;
+}
