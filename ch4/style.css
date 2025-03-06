@@ -1,0 +1,46 @@
+/* Gana SEHAKI 03/01/2025*/
+
+/* this will apply on the body section */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d7c7aa;
+    color: #926f4f;
+    font-size: 16px;
+    }
+/* to remove the underline  */
+nav a{
+    color: #000;
+    text-decoration: none;
+}
+/* header section configurations */
+header{
+    margin-top: 10px; /*to have some space between navbar and header*/
+    background-color: #00602b; /*green for italian vibe*/
+    text-align: center; /*to center the text*/
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+}
+h2, h3{
+    color: #342517; /*h2 and h3 color*/
+}
+p{
+    color: #230e60;
+    background-color: #ffffff;
+}
+/*those are a class selectors*/
+.highlight{
+    font-weight: bold;
+    color: #ee1e28;
+    font-style: italic;
+}
+.special-item{
+    background-color: #ffffff;
+}
+/*this is an id selector*/
+#footer{
+    text-align: center;
+    color: white;
+    background-color: #bb161d;
+}
