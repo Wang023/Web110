@@ -1,0 +1,96 @@
+/* Gana SEHAKI 03/11/2025*/
+/*styles for all the elements*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*styles for the body*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(90deg, #3a0c39, #aa11ea, #374bce);
+    background-color: #f0f8ff;
+    color: #cbd8e3db;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+/* header styles */
+header{
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+}
+header h1{
+    font-size: 4rem;
+}
+/* navigation style */
+nav{
+    background-color: #34495e;
+    padding: 1.5rem 0;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /*gap between items*/
+}
+nav a{
+    color: #fff ;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+nav a:hover{
+    color: #d9e8d8;
+    text-decoration: underline;
+}
+/*main styles*/
+main{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+/*section styles*/
+section{
+    background-color: #7f818a;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 2px solid #0b0a3f;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+section h2{
+    color: #180e51;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+/*paragraphes styles*/
+p{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+/*images styles*/
+img{
+    width: 30%; /*sizingfortheboxes*/
+    height: auto; /*makestheimagesresponsive*/
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+/*footer styles*/
+footer{
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
