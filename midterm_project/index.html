@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section-background">
+        <header id="">
+            <h1>gana.sehaki</h1>
+        </header>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="#my-projects">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><button class="chatNowBtnNav">Let's talk</button></li>
+            </ul>
+        </nav>
+        <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorum animi inventore reprehenderit <br>
+            tenetur repellat at nesciunt unde repudiandae sunt iste doloremque excepturi fugit obcaecati,<br>
+            vitae architecto autem. Repudiandae animi consequatur cumque, quia voluptatibus similique,<br>
+            odit rem dolores neque maxime debitis quisquam. Delectus, facilis ad.
+        </h4>
+
+        <!-- call to action -->
+        <button id="chatNowBtn">Let's talk</button>
+
+        <!-- contact window hidden by default -->
+         <div id="modal" class="modal">
+            <div class="modal-centent">
+                <span class="close-btn">&times;</span>
+                <h2>Contact me</h2>
+                <form action="">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+         </div>
+    </section>
+
+    <section id="my-expertise">
+        <h2>My Expertise</h2>
+        <div class="container">
+            <div class="content-container">
+                <h3>Strategy & Direction</h3>
+                <img class="icon" src="icons/strategy-brainstorm-svgrepo-com.svg" alt="strategy">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo quia doloribus <br>
+                    ab blanditiis repudiandae ipsam eos nulla officiis recusandae? <br>
+                    Suscipit soluta pariatur ipsam sequi minima.
+                </p>
+            </div>
+            <div class="content-container">
+                <h3>Branding & Logo</h3>
+                <img class="icon" src="icons/hangtag-svgrepo-com.svg" alt="strategy">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo quia doloribus <br>
+                    ab blanditiis repudiandae ipsam eos nulla officiis recusandae? <br>
+                    Suscipit soluta pariatur ipsam sequi minima.
+                </p>
+            </div>
+            <div class="content-container">
+                <h3>UI & UX Design</h3>
+                <img class="icon" src="icons/leaf-on-water-svgrepo-com.svg" alt="strategy">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo quia doloribus <br>
+                    ab blanditiis repudiandae ipsam eos nulla officiis recusandae? <br>
+                    Suscipit soluta pariatur ipsam sequi minima.
+                </p>
+
+            </div>
+            <div class="content-container">
+                <h3>Webflow Develepment</h3>
+                <img class="icon" src="icons/developer-centerpublic-api-svgrepo-com.svg" alt="strategy">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo quia doloribus <br>
+                    ab blanditiis repudiandae ipsam eos nulla officiis recusandae? <br>
+                    Suscipit soluta pariatur ipsam sequi minima.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- projects -->
+
+    <section id="my-projects">
+        <h2>My Projects</h2>
+        <!-- images slider begins -->
+        <div class="slider">
+            <div class="slides">
+                <!-- slide radio begins -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!-- slide radio ends -->
+                <!-- slide images begins -->
+                <div class="slide first">
+                    <div class="disp">
+                        <div>
+                            <p><b>Soccer fields reservation website</b></p>
+                            <img src="images/marenasoccer.png" alt="marena">
+                        </div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                            Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                            Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                            Eveniet natus officia tempora temporibus dolorum voluptatibus!</p>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="disp">
+                        <div>
+                            <p><b>Workout program and nutrition website</b></p>
+                            <img src="images/workout.png" alt="workout">
+                        </div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                            Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                            Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                            Eveniet natus officia tempora temporibus dolorum voluptatibus!</p>
+                            <a href="#">Learn more</a>  
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <p><b>Building framework for WordPress</b></p>
+                        <img src="images/wordepress.jpg" alt="wordpress">
+                    </div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                        Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                        Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                        Eveniet natus officia tempora temporibus dolorum voluptatibus!</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <p><b> Our Newsletter website</b></p>
+                        <img src="images/newsletter.jpg" alt="newsletter">
+                    </div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                        Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                        Eveniet natus officia tempora temporibus dolorum voluptatibus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+                        Eveniet natus officia tempora temporibus dolorum voluptatibus!</p>
+                    </div>
+                </div>
+                <!-- slide images ends -->
+            
+            </div>
+            <!-- manual navigation begins -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation ends -->
+        </div>
+        <!-- images slider ends -->
+    </section>
+
+    <!-- skills -->
+    <section id="my-skills">
+        <h2>My skills</h2>
+        <div class="skills-container">
+            <div class="skill-ctr">
+                <h3>HTML</h3>
+                <svg class="circle-container" width="150" height="150">
+                    <circle class="circle circle-1" cx="75" cy="75" r="50"></circle>
+                    <text style = "color : rgb(24, 23, 23)"; class="counter" x="50%" y="50%" text-anchor="middle" dy=".3em">75%</text>
+                </svg>
+
+            </div>
+            <div class="skill-ctr">
+                <h3>CSS</h3>
+                <svg class="circle-container" width="150" height="150">
+                    <circle class="circle circle-2" cx="75" cy="75" r="50"></circle>
+                    <text style = "color : rgb(24, 23, 23)"; class="counter" x="50%" y="50%" text-anchor="middle" dy=".3em">50%</text>
+                </svg>
+
+            </div>
+            <div class="skill-ctr">
+                <h3>JavaScript</h3>
+                <svg class="circle-container" width="150" height="150">
+                    <circle class="circle circle-3" cx="75" cy="75" r="50"></circle>
+                    <text style = "color : rgb(24, 23, 23)"; class="counter" x="50%" y="50%" text-anchor="middle" dy=".3em">40%</text>
+                </svg>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="my-projects" style="height: 500px; background-color: rgb(64, 12, 107);">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
