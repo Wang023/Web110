@@ -121,6 +121,7 @@ nav button:hover{
     -moz-transition: 0.1s;
     -ms-transition: 0.1s;
     -o-transition: 0.1s;
+    cursor: pointer;
 }
 .head-paragraph span{
     font-size: 35px;
@@ -136,8 +137,8 @@ nav button:hover{
 
 /*home image styles*/
 .home-img{
-    height: 500px;
-    width: 750px;
+    height: auto;
+    width: 48%;
     position: absolute;
     right: 135px;
     top: 220px;
