@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MARENA Soccer</title>
+        <script src="jquery-3.7.0.js"></script>
+        <link rel="stylesheet" href="style.css">
+         <style>
+            .no-reserver{
+                color : #f0f0f2;
+                background : #0A2999;
+                border : 1px solid #0A2999;
+                padding : 13px 25px;
+                font-weight : bold;
+                border-radius : 15px;
+                position : relative;
+                top : -200px;
+                left: 785px;
+                font-family : arial;
+            }
+            .no-reserver:hover{
+                background : #f0f0f2;
+                color : #0A2999;
+                transition : 0.7s;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="head">
+            <div class="wrapper">
+                <div class="marena">
+                    <h1>Marena Soccer</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#main">Acceuil</a></li>
+                        <li><a href="#stades">Terrains</a></li>
+                        <li><a href="#reservation_terrain">Reservation</a></li>
+                        <li><a href="#contact">Contact</a></li>  
+                    </ul>
+                </nav>
+            </div>
+            <!-- retourner en haut -->
+            <div id="header">
+                <div id="icon"><a href="#head">↑</a></div>
+            </div>
+        </header>
+        <div class="separation"></div>
+        <section id="main">
+            <div class="text">
+                <h2>Rejoignez notre<br>communauté...</h2>
+                <h3>Le sport va chercher pour la dominer <br> la fatigue pour en triompher. <br> la difficulté pour la vaincre</h3>
+                <a href="#propos" class="btn-2">A propos de nous</a>
+            </div>
+            <div class="joueurs">
+                <img class="joueur" src="images/joueur3.jpg" alt="joueur">
+            </div>  
+        </section>
+        <div class="separation"></div>
+        <section id="stades">
+            <h3>Decouvrez nos terrains de football...</h3>
+            <ul>
+                <li class="container-stade">
+                    <article class="terrain-5">
+                        <div>
+                            <h4>x2 Terrain FIVE</h4>
+                            <a href="#reservation_terrain"><img src="images/Five_auto_x2.jpg" alt="five"></a>
+                            <p><small>Profiter avec vos amis des <br> terrains 5x5 outdoor.</small></p>
+                            <button class="res-btn"><a href="#reservation_terrain">Réserver maintenant</a></button>
+                        </div>
+                    </article>
+                </li>
+                <li class="container-stade">
+                    <article class="terrain-5">
+                        <div>
+                            <h4>x2 Terrain FIVE Couvert</h4>
+                            <a href="#reservation_terrain"><img src="images/five.jpg" alt="five"></a>
+                            <p><small>Découvrez les nouveaux<br>terrains 5x5 indoor.</small></p>
+                            <button class="res-btn"><a href="#reservation_terrain">Réserver maintenant</a></button>
+                        </div>
+                    </article>
+                </li>
+                <li class="container-stade">
+                    <article class="terrain-5">
+                        <div>
+                            <h4>x1 Terrain SEVEN</h4>
+                            <a href="#reservation_terrain"><img src="images/seven.jpg" alt="five"></a>
+                            <p><small>Jouez une partie de foot 7x7 <br> dans le terrain outdoor.</small></p>
+                            <button class="res-btn"><a href="#reservation_terrain">Réserver maintenant</a></button>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <div class="separation"></div>
+
+        <!-- RESERVATION -->
+
+<section id="reservation_terrain">
+    <h2>Réserver un terrain</h2>
+    <!-- images slider depart -->
+    <div class="slider">
+        <div class="slides">
+            <!-- slide radio depart -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- slide radio fin -->
+            <!-- slide images depart -->
+            <div class="slide first">
+                <div class="disp">
+                    <div>
+                        <img src="images/seven.jpg" alt="seven">
+                        <p>Terrain 7 x 7    OUTDOOR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="disp">
+                    <div>
+                        <img src="images/five.jpg" alt="seven">
+                        <p>Terrain 5 x 5    INDOOR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div>
+                    <img src="images/Five_auto_x2.jpg" alt="seven">
+                    <p>Terrain 5 x 5 OUTDOOR</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div>
+                    <img src="images/five.jpg" alt="seven">
+                    <p>Lorem ipsum dolor sit amet. <br> Lorem ipsum dolor</p>
+                </div>
+            </div>
+            <!-- slide images fin -->
+            <!-- automatic navigation -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!-- automatic navigation fin -->
+        </div>
+        <!-- manual navigation depart -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!-- manual navigation fin -->
+    </div>
+    <!-- images slider fin -->
+</section>
+
+        <div class="separation"></div>
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+            <div class="container">
+                <h3>Contactez-Nous</h3>
+                <p>Envie de rejoindre notre complexe sportif et vivre une expérience sportive exceptionnelle? 
+                N'hésitez pas à nous contacter via le formulaire <br>  ci-dessous pour obtenir plus d'information</p>
+                <form action="recup_donnee.php" method="post">
+                    <input type="text" name="email" placeholder="Votre email">
+                    <input type="text" name="message" placeholder="Votre message..." maxlength="80">
+                    <input type="submit" value="Envoyer" name="envoyer" class="button-3">
+                    <input type="reset" value="Annuler" class="button-4">    
+                </form>
+            </div>
+        </section>
+
+        <div class="separation"></div>
+        <section id="propos">
+            <h3>A propos de nous</h3>
+            <div class="ligne"></div>
+            <div class="container-icons">
+                <ul>
+                    <li>
+                        <div class="icons-1">
+                            <img src="icons/map-location-svgrepo-com.svg" alt="location" class="img-1">
+                            <p>Tizi Rached 15000 <br> Tizi-Ouzou <br> Algérie</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icons-2">
+                            <img src="icons/stadium-cenit-view-svgrepo-com.svg" alt=" superficie" class="img-2">
+                            <p>Une superficie > 8000m²<br>5 terrains de football moderne 
+                            <br>Un cafeteria<br>Un restaurant</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icons-3">
+                            <img src="icons/rcd-espanyol-de-barcelona.svg" alt="espanyol" class="img-3">
+                            <p>Academy de football<br>En partenariat avec <br> RCD Espanyol Barcelone</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>Suivez-nous sur</p>
+            <div class="resaux">
+                <a href="https://web.facebook.com/Complexe.sportif.dz/?locale=fr_FR&_rdc=1&_rdr"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/marenasoccer/?hl=fr"><i class="fab fa-instagram"></i></a>
+                <a href="https://web.facebook.com/Complexe.sportif.dz/?locale=fr_FR&_rdc=1&_rdr"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">MARENA Soccer©Tous droits reservés </p>
+            <div class="logo-cont">
+                <img src="images/Logo.jpg" alt="marena" class="marenalogo">
+                <img src="icons/rcd-espanyol.svg" alt="esp">
+            </div>
+        </footer>  
+    </body>
+</html>
