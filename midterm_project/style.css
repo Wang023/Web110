@@ -138,9 +138,9 @@ nav button:hover{
 /*home image styles*/
 .home-img{
     height: auto;
-    width: 40%;
+    width: 30%;
     position: absolute;
-    right: 100px;
+    right: 70px;
     top: 220px;
     box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
