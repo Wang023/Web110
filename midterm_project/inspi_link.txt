@@ -1,6 +1,0 @@
-https://www.pascalstrasche.com/
-
-#1a1b1c noir
-#5a6066 gris
-#aeffe0 vert mint
-#e8ebea blanc
