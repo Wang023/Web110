@@ -102,7 +102,7 @@ nav a:hover::after{
 
 /*button styles*/
 
-nav button{
+nav .chatNowBtnNav{
     font-weight: 550;
     margin-left: 45px;
     padding: 5px 1rem;
@@ -116,7 +116,7 @@ nav button{
     -o-border-radius: 25px;
     cursor: pointer;
 }
-nav button:hover{
+nav .chatNowBtnNav:hover{
     background-color: #e6e1e1;
     color: #333435;
     transition: 0.1s;
