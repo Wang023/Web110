@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--Gana Sehaki 04/09/2025-->
+<html lang="en">
+<head>
+    <!--Informations for the web browser-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter candy wonderland</title>
+    <!--This is my style tag -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #wrapper{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex; /* Creates a flex container */
+            flex-direction: column;   /* Arranges items vertically */ 
+            max-width: 100%; /* Sets maximum width to 100% of the viewport */
+            margin: 0; /* Removes default margins */
+            background: linear-gradient(to right, #80CBC4 50%, rgb(25, 145, 174)); /* Sets a linear gradient background */
+
+        }
+        header{
+            background-image: url(background.jpg); /* Sets a background image */
+            padding: 1em; /* Adds padding */
+            text-align: center; /* center the text */
+            
+        }
+        img{
+            justify-content: flex-start; /* Aligns flex items to the start of the flex container's main axis */
+        }
+        main{
+            display: flex; /* creates a flex container */
+            flex-direction: row; /* arranges items horizontally */
+            flex-grow: 1; /* allows the main section to expend */
+        }
+        nav{
+            background: #FFAB00; 
+            padding: 1em; /* Adds padding */
+            width: 200px; /* Sets width to 200 pixels */
+            flex-shrink: 0; /* prevents shrinking */ 
+        }
+        article{
+            padding: 1rem;
+            flex-grow: 1;
+        }
+        footer{
+            background: #26a69a;
+            padding: 1rem;
+            text-align: center;
+        }
+        .details{
+            color: #4a0963;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        article img{
+            max-width: 100%; /* makes the image responsive */
+            height: auto; /* maintains image aspect ratio */
+            display: block; /*makes image block level */
+            margin: 1em 0 1em 0; /* sets vertical margins */
+        }
+        nav a{
+            display: block; /* makes links block level */
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            text-align: center; /* centers the link text */
+        }
+
+        @media (max-width: 700px) {
+            main{
+                flex-direction: column; /* arranges items vertically */
+            }
+            nav{
+                width: 100%; /* makes the nav */
+            }
+            article{
+                flex-direction: column; /* arranges articles vertically and expand */
+                flex-grow: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--This ios a wrapper-->
+    <div id="wrapper">
+        <header>
+            <h1>Easter Candy Delights</h1>
+        </header>
+        <!--main content-->
+        <main>
+            <!--navigation bar-->
+            <nav>
+                <a href="#chocolate">Chocolate Bunnies</a>
+                <a href="#peeps">Marshmallow Peeps</a>
+            </nav>
+            <!--articles with sections-->
+            <article>
+                <section>
+                    <h2>Chocolate Bunnies</h2>
+                    <img src="bunnies.jpg" alt="Chocolate Bunnies">
+                    <p class="details">Chocolate bunnies are a classic Easter treat, enjoyed by children and adults alike. 
+                    The come in various sizes and flavors, from milk chocolate to dark chocolate.</p>
+                </section>
+                <section>
+                    <h2>Marshmallow Peeps</h2>
+                    <img src="peeps.jpg" alt="Marshmallow Peeps">
+                    <p class="details">Marshmallow Peeps are a sweet and colorful Easter staple.
+                    These marshmallow candiesare shaped like chicks or bunnies and come in a variety of colors.</p>
+                </section>
+            </article>
+            <article>
+                <section>
+                    <h2>Easter Eggs</h2>
+                    <img src="eggs.jpg" alt="Easter Eggs">
+                    <p class="details">Easter eggs, especially chocolate ones, are a popular Easter tradition.
+                    They can be solid chocolate or filled with cream or other sweet fillings.</p>
+                </section>
+                <section>
+                    <h2>Jelly Beans</h2>
+                    <img src="jellybeans.jpg" alt="Jelly Beans">
+                    <p class="details">Jelly beans are a colorful and chewy candy that's a favorite during Easter.
+                    They come in wide range of flavors, making them a fun treat for everyone.</p>
+                </section>
+            </article>
+        </main>
+        <!--this a footer with a copyright-->
+        <footer>
+            <p>&copy; 2025 Easter Candy</p>
+        </footer>
+    </div> 
+</body>
+</html>
