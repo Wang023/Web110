@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- Gana Sehaki 05/13/2025 -->
+<html lang="en">
+<head>
+  <!-- head for browser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom: BMW, Mercedes, Audi</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- my header -->
+    <header>
+        <div id="logo"><img src="icons/logo1.svg" alt="logo"></div>
+        <nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="menu">
+                <li class="dropDown">
+                    <a href="#bmw">BMW <span>&#187;</span></a>
+                    <ul class="subMenu">
+                        <li><a href="#" class="lightLink">SUVs</a></li>
+                        <li><a href="#" class="lightLink">Berline</a></li>
+                        <li><a href="#" class="lightLink">Elecric</a></li>
+                        <li><a href="html/audi.html" class="lightLink">M\Performance</a></li>
+                    </ul>
+                </li>
+                <li class="dropDown">
+                    <a href="#mercedes">Mercedes <span>&#187;</span></a>
+                    <ul class="subMenu">
+                        <li><a href="#" class="lightLink">SUVs</a></li>
+                        <li><a href="#" class="lightLink">Berline</a></li>
+                        <li><a href="#" class="lightLink">Elecric</a></li>
+                        <li><a href="html/mercedes.html" class="lightLink">AMG</a></li>
+                    </ul>
+                </li>
+                <li class="dropDown">
+                    <a href="#audi">Audi <span>&#187;</span></a>
+                    <ul class="subMenu">
+                        <li><a href="#" class="lightLink">SUVs</a></li>
+                        <li><a href="#" class="lightLink">Berline</a></li>
+                        <li><a href="#" class="lightLink">Elecric</a></li>
+                        <li><a href="html/audi.html" class="lightLink">RS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About</a></li>
+                <li class="floatRight"><a href="form.html">Visit Us!</a></li>
+                <li class="chatBot floatRight"><button id="chatBotBtn">ChatBot</button></li>
+            </ul>
+        </nav>
+        <div id="modal" class="modal">
+          <div class="modal-centent">
+              <button class="close-btn">&times;</button>
+              <div id="chat-area">
+                <ul id="messages">
+        
+                </ul>
+              </div>
+              <input type="text" id="message-input" placeholder="Type your message">
+              <button id="send-button">Send</button>
+              <button id="clear-button">Clear</button>
+          </div>
+       </div>
+    </header>
+    <main>
+            <div class="wrapper">
+              <!-- first section -->
+             <section id="home">
+              <div class="video-container">
+                <video autoplay muted loop id="bg-video">
+                  <source src="video/videoplayback.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+              <div class="content">
+                <h2>BMW M3 G82</h2>
+                <a class="push-link" href="#bmw">Pushes the limits.</a>
+              </div>
+            </section>
+            <div></div>
+            <!-- second section -->
+
+
+            <h2 class="heading">BMW Showroom</h2>
+
+            <section id="bmw" class="collection">
+              <div class="swiper mySwiper">
+                <div id="bmw-berline" class="swiper-wrapper">
+                  <div class="content swiper-slide">
+                    <img src="images/bmw/car1.jpg" alt="">
+                    <div class="text-content">
+                      <h3>The F90 M5</h3>
+                      <p>A sedan is a classic four-door passenger car known for comfort, fuel efficiency, and practicality. It has a separate trunk and generally seats five people, making it a popular choice for daily commuting.</p>
+                      <a class="btn" href="html/bmw.html">Read more</a>
+                    </div>
+                  </div>
+                  <div class="content swiper-slide">
+                    <img src="images/bmw/car2.jpg" alt="">
+                    <div class="text-content">
+                      <h3>The xDrive 240d</h3>
+                      <p>A sedan is a classic four-door passenger car known for comfort, fuel efficiency, and practicality. It has a separate trunk and generally seats five people, making it a popular choice for daily commuting.</p>
+                      <a class="btn" href="html/bmw.html">Read more</a>
+                    </div>
+                  </div>
+                  <div class="content swiper-slide">
+                    <img src="images/bmw/car3.jpg" alt="">
+                    <div class="text-content">
+                      <h3>The X5 M</h3>
+                      <p>An SUV is a larger, more rugged vehicle designed for versatility and space. It typically offers higher ground clearance, all-wheel drive options, and a roomy interior for passengers and cargo.</p>
+                      <a class="btn" href="html/bmw.html">Read more</a>
+                    </div>
+                  </div>
+                  <div class="content swiper-slide">
+                    <img src="images/bmw/car4.jpg" alt="">
+                    <div class="text-content">
+                      <h3>The XB7 Alpina</h3>
+                      <p>An SUV is a larger, more rugged vehicle designed for versatility and space. It typically offers higher ground clearance, all-wheel drive options, and a roomy interior for passengers and cargo.</p>
+                      <a class="btn" href="html/bmw.html">Read more</a>
+                    </div>
+                  </div>
+                  <div class="content swiper-slide">
+                    <img src="images/bmw/car5.jpg" alt="">
+                    <div class="text-content">
+                      <h3>The G80 M3 Competition</h3>
+                      <p>LA sports car is a low, sleek vehicle designed for speed, performance, and agility. It usually has two doors, a powerful engine, and sharp handling, making it ideal for driving enthusiasts.</p>
+                      <a class="btn" href="html/bmw.html">Read more</a>
+                    </div>
+                  </div>
+                  <div class="content swiper-slide">
+                    <img src="images/bmw/car6.jpg" alt="">
+                    <div class="text-content">
+                      <h3>The M8 Competition</h3>
+                      <p>A sports car is a low, sleek vehicle designed for speed, performance, and agility. It usually has two doors, a powerful engine, and sharp handling, making it ideal for driving enthusiasts.</p>
+                      <a class="btn" href="html/bmw.html">Read more</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </section>
+            <div></div>
+
+            <!-- third section -->
+
+            <h2 class="heading">MERCEDES Showroom</h2>
+            <section id="mercedes" class="collection">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="content swiper-slide">
+                        <img src="images/mercedes/car1.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The Class A</h3>
+                          <p>A sedan is a classic four-door passenger car known for comfort, fuel efficiency, and practicality. It has a separate trunk and generally seats five people, making it a popular choice for daily commuting.</p>
+                          <a href="html/mercedes.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/mercedes/car2.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The C class</h3>
+                          <p>A sedan is a classic four-door passenger car known for comfort, fuel efficiency, and practicality. It has a separate trunk and generally seats five people, making it a popular choice for daily commuting.</p>
+                          <a href="html/mercedes.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/mercedes/car3.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The G63 AMG 4Matic </h3>
+                          <p>An SUV is a larger, more rugged vehicle designed for versatility and space. It typically offers higher ground clearance, all-wheel drive options, and a roomy interior for passengers and cargo.</p>
+                          <a href="html/mercedes.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/mercedes/car4.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The GLC 63 S 4Matic</h3>
+                          <p>An SUV is a larger, more rugged vehicle designed for versatility and space. It typically offers higher ground clearance, all-wheel drive options, and a roomy interior for passengers and cargo.</p>
+                          <a href="html/mercedes.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/mercedes/car5.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The G63 AMG GTR</h3>
+                          <p>A sports car is a low, sleek vehicle designed for speed, performance, and agility. It usually has two doors, a powerful engine, and sharp handling, making it ideal for driving enthusiasts.</p>
+                          <a href="html/mercedes.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/mercedes/car6.jpg" alt="">
+                        <div class="text-content">
+                          <h3>CLA 45S AMG 4MATIC</h3>
+                          <p>A sports car is a low, sleek vehicle designed for speed, performance, and agility. It usually has two doors, a powerful engine, and sharp handling, making it ideal for driving enthusiasts.</p>
+                          <a href="html/mercedes.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+
+            </section>
+
+            <div></div>
+
+
+            <!-- fourth section -->
+
+
+            <h2 class="heading">AUDI Showroom</h2>
+
+            <section id="audi" class="collection">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="content swiper-slide">
+                        <img src="images/audi/A3.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The AUDI A3 tdi</h3>
+                          <p>A sedan is a classic four-door passenger car known for comfort, fuel efficiency, and practicality. It has a separate trunk and generally seats five people, making it a popular choice for daily commuting.</p>
+                          <a href="html/audi.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/audi/S5.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The AUDI S5 2.0 tdi</h3>
+                          <p>A sedan is a classic four-door passenger car known for comfort, fuel efficiency, and practicality. It has a separate trunk and generally seats five people, making it a popular choice for daily commuting.</p>
+                          <a href="html/audi.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/audi/Q7.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The AUDI Q7 V6 tsi</h3>
+                          <p>An SUV is a larger, more rugged vehicle designed for versatility and space. It typically offers higher ground clearance, all-wheel drive options, and a roomy interior for passengers and cargo.</p>
+                          <a href="html/audi.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/audi/Q8.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The AUDI Q8 V6 tsi</h3>
+                          <p>An SUV is a larger, more rugged vehicle designed for versatility and space. It typically offers higher ground clearance, all-wheel drive options, and a roomy interior for passengers and cargo.</p>
+                          <a href="html/audi.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/audi/RS6.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The AUDI RS6 3.0 tfsi</h3>
+                          <p>A sports car is a low, sleek vehicle designed for speed, performance, and agility. It usually has two doors, a powerful engine, and sharp handling, making it ideal for driving enthusiasts.</p>
+                          <a href="html/audi.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                      <div class="content swiper-slide">
+                        <img src="images/audi/RS7.jpg" alt="">
+                        <div class="text-content">
+                          <h3>The AUDI RS7 4.0 tfsi</h3>
+                          <p>A sports car is a low, sleek vehicle designed for speed, performance, and agility. It usually has two doors, a powerful engine, and sharp handling, making it ideal for driving enthusiasts.</p>
+                          <a href="html/audi.html" class="btn">Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+
+            </section>
+
+            <!-- about section -->
+
+            <section id="about">
+              <h2 class="heading about">About us</h2>
+              <ul class="about-links">
+                <li><a href="https://www.bmwusa.com">Visit the official BMW.usa website for more !</a></li>
+                <li><a href="https://www.usa.com">Visit the official Mercedes.usa website for more !</a></li>
+                <li><a href="https://www.audiusa.com">Visit the official AUDI.usa website for more !</a></li>
+                <li><a href="html/bmw.html#contact">Contact a BMW sales-man for informations !</a></li>
+                <li><a href="html/mercedes.html#contact">Contact a Mercedes sales-man for informations !</a></li>
+                <li><a href="html/audi.html#contact">Contact an AUDI sales-man for informations !</a></li>
+              </ul>
+            </section>
+           </div>
+    </main>
+    <!-- my footer -->
+    <footer>
+      <ol style="font-size: 18px;">
+        <li>car showroom &copy; 2025 -- By Gana SEHAKI</li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank" style="margin-right: 15px;">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank" style="margin-right: 15px;">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" target="_blank" style="margin-right: 15px;">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </li>
+      </ol>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- script js -->
+    <script src="script.js"></script>
+</body>
+</html>
