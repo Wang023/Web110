@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Would You Go On A Date With me? ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e7, #fff0f5);
+      overflow: hidden;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 500px;
+      padding: 50px 25px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: heartbeat 1.2s infinite;
+    }
+
+    h1 {
+      color: #333;
+      margin: 15px 0 35px;
+      font-size: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      border: none;
+      padding: 14px 30px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #yes {
+      background: #ff4f81;
+      color: white;
+      position: relative;
+      z-index: 2;
+    }
+
+    #yes:hover {
+      transform: scale(1.1);
+      background: #ff336d;
+    }
+
+    #no {
+      background: #ddd;
+      color: #333;
+      position: fixed;
+      transition: left 0.15s ease, top 0.15s ease;
+    }
+
+    #message {
+      display: none;
+      margin-top: 25px;
+      font-size: 24px;
+      color: #ff4081;
+      font-weight: bold;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.15);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+
+    <h1>Would you go on a date with me? 👀</h1>
+
+    <div class="buttons">
+      <button id="yes">YES 😌</button>
+      <button id="no">Absolutely NOT 😭</button>
+    </div>
+
+    <div id="message">
+      I KNEW IT! 😍❤️
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.getElementById("no");
+    const yesButton = document.getElementById("yes");
+    const message = document.getElementById("message");
+
+    function moveNoButton() {
+      const padding = 20;
+
+      const maxX = window.innerWidth - noButton.offsetWidth - padding;
+      const maxY = window.innerHeight - noButton.offsetHeight - padding;
+
+      const randomX = Math.random() * maxX + padding / 2;
+      const randomY = Math.random() * maxY + padding / 2;
+
+      noButton.style.left = randomX + "px";
+      noButton.style.top = randomY + "px";
+    }
+
+    // Desktop
+    noButton.addEventListener("mouseenter", moveNoButton);
+
+    // Mobile
+    noButton.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      moveNoButton();
+    });
+
+    // If somehow they manage to click NO 😂
+    noButton.addEventListener("click", moveNoButton);
+
+    yesButton.addEventListener("click", () => {
+      message.style.display = "block";
+      noButton.style.display = "none";
+      yesButton.textContent = "DATE ACCEPTED 💕";
+    });
+  </script>
+
+</body>
+</html>
