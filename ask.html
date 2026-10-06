@@ -45,7 +45,9 @@
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 45px;
+      align-items: center;
+      gap: 30px;
+      min-height: 50px;
     }
 
     button {
@@ -61,7 +63,6 @@
     #yes {
       background: #ff4f81;
       color: white;
-      position: relative;
       z-index: 2;
     }
 
@@ -71,10 +72,10 @@
     }
 
     #no {
-      margin-top: 35px;
       background: #ddd;
       color: #333;
       transition: left 0.15s ease, top 0.15s ease;
+      z-index: 10;
     }
 
     #message {
@@ -119,6 +120,9 @@
     const message = document.getElementById("message");
 
     function moveNoButton() {
+      // Switch to fixed positioning on first interaction so it can float freely
+      noButton.style.position = "fixed";
+
       const padding = 20;
 
       const maxX = window.innerWidth - noButton.offsetWidth - padding;
@@ -140,7 +144,7 @@
       moveNoButton();
     });
 
-    // If somehow they manage to click NO 😂
+    // Fallback click handle
     noButton.addEventListener("click", moveNoButton);
 
     yesButton.addEventListener("click", () => {
