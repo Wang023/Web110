@@ -6,9 +6,7 @@
   <title>Would You Go On A Date With me? ❤️</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -86,13 +84,65 @@
       font-weight: bold;
     }
 
+    /* Date picker popup */
+    #modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    #modal.open { display: flex; }
+
+    .modal-box {
+      width: 90%;
+      max-width: 380px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-box h2 {
+      margin: 0 0 8px;
+      color: #333;
+    }
+
+    .modal-box p {
+      margin: 0 0 18px;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .modal-box input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ffc2d6;
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+
+    #confirm {
+      background: #ff4f81;
+      color: white;
+      width: 100%;
+    }
+
+    #status {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #ff4081;
+      min-height: 18px;
+    }
+
     @keyframes heartbeat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.15);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
   </style>
 </head>
@@ -109,48 +159,115 @@
       <button id="no">Absolutely NOT 😭</button>
     </div>
 
-    <div id="message">
-      I KNEW IT! 😍❤️
+    <div id="message">I KNEW IT! 😍❤️</div>
+  </div>
+
+  <!-- Date and time popup -->
+  <div id="modal">
+    <div class="modal-box">
+      <h2>Pick our date 💕</h2>
+      <p>Choose the day and time that works for you</p>
+      <input type="text" id="who" placeholder="Your name">
+      <input type="datetime-local" id="when">
+      <button id="confirm">Confirm date ✅</button>
+      <div id="status"></div>
     </div>
   </div>
 
   <script>
+    // CHANGE THIS to your email
+    const MY_EMAIL = "YOUR_EMAIL@gmail.com";
+
     const noButton = document.getElementById("no");
     const yesButton = document.getElementById("yes");
     const message = document.getElementById("message");
+    const modal = document.getElementById("modal");
+    const whenInput = document.getElementById("when");
+    const whoInput = document.getElementById("who");
+    const confirmBtn = document.getElementById("confirm");
+    const statusEl = document.getElementById("status");
 
     function moveNoButton() {
-      // Switch to fixed positioning on first interaction so it can float freely
       noButton.style.position = "fixed";
-
       const padding = 20;
-
       const maxX = window.innerWidth - noButton.offsetWidth - padding;
       const maxY = window.innerHeight - noButton.offsetHeight - padding;
-
-      const randomX = Math.random() * maxX + padding / 2;
-      const randomY = Math.random() * maxY + padding / 2;
-
-      noButton.style.left = randomX + "px";
-      noButton.style.top = randomY + "px";
+      noButton.style.left = Math.random() * maxX + padding / 2 + "px";
+      noButton.style.top = Math.random() * maxY + padding / 2 + "px";
     }
 
-    // Desktop
     noButton.addEventListener("mouseenter", moveNoButton);
-
-    // Mobile
     noButton.addEventListener("touchstart", (e) => {
       e.preventDefault();
       moveNoButton();
     });
-
-    // Fallback click handle
     noButton.addEventListener("click", moveNoButton);
+
+    // Prevent picking a date in the past
+    function setMinDate() {
+      const now = new Date();
+      now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+      whenInput.min = now.toISOString().slice(0, 16);
+    }
 
     yesButton.addEventListener("click", () => {
       message.style.display = "block";
       noButton.style.display = "none";
       yesButton.textContent = "DATE ACCEPTED 💕";
+      setMinDate();
+      modal.classList.add("open");
+    });
+
+    // Format a Date as YYYYMMDDTHHMMSS (local time) for Google Calendar
+    function gcalFormat(d) {
+      const p = (n) => String(n).padStart(2, "0");
+      return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) +
+             "T" + p(d.getHours()) + p(d.getMinutes()) + "00";
+    }
+
+    confirmBtn.addEventListener("click", async () => {
+      if (!whenInput.value) {
+        statusEl.textContent = "Please pick a date and time first 🙂";
+        return;
+      }
+
+      const name = whoInput.value.trim() || "Someone special";
+      const start = new Date(whenInput.value);
+      const end = new Date(start.getTime() + 2 * 60 * 60 * 1000); // 2 hour date
+      const niceDate = start.toLocaleString([], {
+        weekday: "long", year: "numeric", month: "long",
+        day: "numeric", hour: "2-digit", minute: "2-digit"
+      });
+
+      confirmBtn.disabled = true;
+      statusEl.textContent = "Sending...";
+
+      // 1. Email the details to you (FormSubmit, free)
+      try {
+        await fetch("https://formsubmit.co/ajax/" + MY_EMAIL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            _subject: "💕 Date accepted by " + name + "!",
+            name: name,
+            date_and_time: niceDate
+          })
+        });
+      } catch (err) {
+        console.error("Email failed:", err);
+      }
+
+      // 2. Open Google Calendar with the event prefilled
+      const calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+        "&text=" + encodeURIComponent("Our Date 💕") +
+        "&dates=" + gcalFormat(start) + "/" + gcalFormat(end) +
+        "&details=" + encodeURIComponent("Date with " + name + " ❤️") +
+        "&add=" + encodeURIComponent(MY_EMAIL);
+
+      window.open(calUrl, "_blank");
+
+      statusEl.textContent = "Done! See you then 😍";
+      setTimeout(() => modal.classList.remove("open"), 1800);
     });
   </script>
 
